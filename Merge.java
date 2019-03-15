@@ -1,12 +1,12 @@
 public class Merge{
-  public static toString(int[] arr){
+  public static String toString(int[] arr){
     String toReturn = "";
     for(int i = 0;i < arr.length;i++){
       toReturn+=arr[i]+", ";
     }
-    return toReturn
+    return toReturn;
   }
-  public int[] merger(int[] arr1, int[] arr2){
+  public static int[] merger(int[] arr1, int[] arr2){
     int[] toReturn = new int[arr1.length+arr2.length];
     int arr1Counter = 0;
     int arr2Counter = 0;
@@ -20,8 +20,11 @@ public class Merge{
         arr1Counter++;
       }
     }
+    return toReturn;
   }
   public static void main(String[] args){
-    System.out.println(Merge.toString())
+    int[] arr1= {3,6,7,8,9,11,134};
+    int[] arr2= {1,5,6,8,10,11,134,160,1545};
+    System.out.println(Merge.toString(Merge.merger(arr1,arr2)));
   }
 }
